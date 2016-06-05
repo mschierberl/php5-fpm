@@ -154,7 +154,7 @@ php5_fpm_pool "example" do
                        { "sendmail_path" => "/usr/sbin/sendmail -t -i -f www@my.yourdomain.com", "memory_limit" => "16M"}
                    )
     action :modify
-    notifies :restart, "service[#{node["php_fpm"]["packag"]}]", :delayed
+    notifies :restart, "service[#{node["php_fpm"]["package"]}]", :delayed
 end
 ```
 
